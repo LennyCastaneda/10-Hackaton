@@ -3,21 +3,22 @@
 
     angular
         .module('formApp')
-        .factory('stockFactory', stockFactory);
+        .factory('businessFactory', businessFactory);
 
-    stockFactory.$inject = ['$http', '$q'];
+    businessFactory.$inject = ['$http', '$q'];
 
     /* @ngInject */
-    function stockFactory($http, $q) {
+    function businessFactory($http, $q) {
         var service = {
-            getStockQuote: getStockQuote,
+            getBusinessNews: getBusinessNews,
 
         };
+
         return service;
 
         ////////////////
 
-        function getStockQuote(business) {
+        function getBusinessNews(business) {
         	var deferred = $q.defer();
 
 	        $http.get('http://content.guardianapis.com/search?q=' + business + '&api-key=b1107cb2-bf15-49ee-94b1-d043854f5127')
@@ -32,7 +33,8 @@
 
 	    return deferred.promise;
 
-        } //  getStockQuote function
+        } //  getBusinessNews function
 
-    }	// stockFactory function
+        
+    }	// businessFactory function
 })();

@@ -1,0 +1,97 @@
+
+<body ng-controller="formController as formCtrl">
+
+	<div>
+		<header id="main-header" style="-webkit-box-shadow: -3px 4px 17px 1px rgba(0,0,0,0.56);
+	-moz-box-shadow: -3px 4px 17px 1px rgba(0,0,0,0.56);
+	box-shadow: -3px 4px 17px 1px rgba(0,0,0,0.56);
+	  background-size: 100px; min-width=314;">
+			<div class="well title">
+				<h1 class="text-shadow text-center">Stay Updated with Companies You Invest In</h1>
+			</div>
+		</header> <!-- /header -->
+	</div>	
+
+	<!-- Main wrapper class div-->
+	<div class="wrapper">
+		<!-- Content container div-->
+		<div class="container">
+			<!-- Form div-->
+			<form ng-submit="getBusinessNews(formCtrl.company)">  <!-- ng-submit something here -->
+			  
+			  <div class="form-group">
+			    <label for="firstName">First name</label>
+			    <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+			  </div> <!-- First name div-->
+			  
+			  <div class="form-group">
+			    <label for="lastName">Last name</label>
+			    <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+			  </div> <!-- Last name div-->	  
+			  
+			  <div class="form-group">
+			    <label for="emailInput">Email address</label>
+			    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter your email">
+			    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			  </div> <!-- Email div-->
+			
+
+
+			<!--=========== ng-model UserInput Ticker div================-->  
+			  <div class="form-group">
+			    <label for="company">Company</label>
+
+			    <input ng-model="formCtrl.company" required type="text" class="form-control" id="companyInput" placeholder="Company full name goes here">
+			 	
+			 	<small id="companyInput" class="form-text text-muted">Please enter the name of the company you're invested in.</small>
+			  </div> <!-- Company div-->
+			 <!--=========== ng-model UserInput Ticker div================-->			  
+
+
+
+			  <div class="form-group">
+			    <label for="ticker">Ticker symbol</label>			    
+			    <input type="text" class="form-control" id="tickerInput" placeholder="Enter ticker symbol goes here">
+			    <small class="form-text text-muted">Type in ticker symbol here.</small>		  			  
+			  </div> 
+
+			  <div class="form-group">
+			    <label for="totalShares">Total shares</label>
+			    <input type="number" class="form-control" id="sharesInput" placeholder="Enter your total shares">
+			    <small class="form-text text-muted">How many shares do you currently own?</small>		  
+			  </div> <!-- Total shares div-->
+			  
+			  <div class="form-group">
+			    <label for="exampleTextarea">Investor feedback (optional)</label>
+			    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Enter feedback for company investor relations here."></textarea>
+			  </div> <!-- Feedback div-->
+			  
+			  <div>
+			  	<a ng-click="formCtrl.userInput(formCtrl.company)" type="submit" class="btn btn-primary pull-right" ui-sref="company({ businessName: business.webTitle})">Submit</a>
+			  </div> <!-- Button div - ui-sref trigger -->
+
+		</div> <!-- Content container div-->
+	</div> <!-- Wrapper class div -->
+
+	<div ng-repeat="x in formCtrl.companyData.response.results">
+ 		<a href="{{x.webUrl}}"><strong>{{x.webTitle}}</strong></a>
+ 		<br>
+		<br>
+	</div>
+
+
+<!-- 	<div ng-repeat="x in formCtrl.companyData.response.results">
+        
+ 		<a href="{{x.webUrl}}"><strong>{{x.webTitle}}</strong></a>
+ 		<br>
+		<br>
+	</div> -->
+
+	<!-- Main container div -->
+	<div class="container">
+		
+	</div> <!-- ui-view container div -->
+
+	<pre>{{ formCtrl.company | json }}</pre>
+
+

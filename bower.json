@@ -26,6 +26,7 @@
   "dependencies": {
     "angular": "^1.5.8",
     "bootstrap": "^3.3.7",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "angular-ui-router": "^0.3.1"
   }
 }

@@ -5,10 +5,10 @@
         .module('formApp')
         .controller('formController', formController);
 
-    formController.$inject = ['stockFactory'];
+    formController.$inject = ['businessFactory'];
 
     /* @ngInject */
-    function formController(stockFactory) {
+    function formController(businessFactory) {
         var vm = this; //jshint ignore:line
         vm.company = '';
         vm.userInput = userInput;
@@ -17,9 +17,7 @@
 
         function userInput(info) {
         	var upperCaseTicker = vm.company;
-        	// var upperCaseTicker = upperCaseTicker.toUpperCase();
-			
-	        stockFactory.getStockQuote(info).then(
+	        businessFactory.getBusinessNews(info).then(
 	        	function(data) {
 	        		vm.companyData = data;
 	        		console.log(data);
