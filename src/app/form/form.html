@@ -1,21 +1,19 @@
-
 <body ng-controller="formController as formCtrl">
-
-	<div>
-		<header id="main-header" style="-webkit-box-shadow: -3px 4px 17px 1px rgba(0,0,0,0.56);
-	-moz-box-shadow: -3px 4px 17px 1px rgba(0,0,0,0.56);
-	box-shadow: -3px 4px 17px 1px rgba(0,0,0,0.56);
-	  background-size: 100px; min-width=314;">
-			<div class="well title">
-				<h1 class="text-shadow text-center">Stay Updated with Companies You Invest In</h1>
-			</div>
-		</header> <!-- /header -->
-	</div>	
-
 	<!-- Main wrapper class div-->
 	<div class="wrapper">
 		<!-- Content container div-->
 		<div class="container">
+			<div>
+				<header id="main-header" style="-webkit-box-shadow: -3px 4px 17px 1px rgba(0,0,0,0.56);
+			-moz-box-shadow: -3px 4px 17px 1px rgba(0,0,0,0.56);
+			box-shadow: -3px 4px 17px 1px rgba(0,0,0,0.56);
+			  background-size: 100px; min-width=314;">
+					<div class="well well-primary">
+						<h1 class="text-shadow text-center">Stay Updated on Your Company</h1>
+					</div>
+				</header> <!-- /header -->
+			</div>	
+
 			<!-- Form div-->
 			<form ng-submit="getBusinessNews(formCtrl.company)">  <!-- ng-submit something here -->
 			  
@@ -41,7 +39,7 @@
 			  <div class="form-group">
 			    <label for="company">Company</label>
 
-			    <input ng-model="formCtrl.company" required type="text" class="form-control" id="companyInput" placeholder="Company full name goes here">
+			    <input ng-model="formCtrl.businessName" required type="text" class="form-control" id="companyInput" placeholder="Company full name goes here">
 			 	
 			 	<small id="companyInput" class="form-text text-muted">Please enter the name of the company you're invested in.</small>
 			  </div> <!-- Company div-->
@@ -67,11 +65,12 @@
 			  </div> <!-- Feedback div-->
 			  
 			  <div>
-			  	<a ng-click="formCtrl.userInput(formCtrl.company)" type="submit" class="btn btn-primary pull-right" ui-sref="company({ businessName: business.webTitle})">Submit</a>
+			  	<button type="submit" class="btn btn-primary pull-right" ui-sref="company({ businessName: formCtrl.businessName })">Submit</button>
 			  </div> <!-- Button div - ui-sref trigger -->
 
 		</div> <!-- Content container div-->
 	</div> <!-- Wrapper class div -->
+
 
 	<div ng-repeat="x in formCtrl.companyData.response.results">
  		<a href="{{x.webUrl}}"><strong>{{x.webTitle}}</strong></a>
@@ -79,19 +78,4 @@
 		<br>
 	</div>
 
-
-<!-- 	<div ng-repeat="x in formCtrl.companyData.response.results">
-        
- 		<a href="{{x.webUrl}}"><strong>{{x.webTitle}}</strong></a>
- 		<br>
-		<br>
-	</div> -->
-
-	<!-- Main container div -->
-	<div class="container">
-		
-	</div> <!-- ui-view container div -->
-
-	<pre>{{ formCtrl.company | json }}</pre>
-
-
+<!-- 	<pre>{{ fformCtrl.companyData.response.results| json }}</pre> -->

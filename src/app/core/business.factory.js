@@ -10,18 +10,17 @@
     /* @ngInject */
     function businessFactory($http, $q) {
         var service = {
-            getBusinessNews: getBusinessNews,
-
+            getBusinessNews: getBusinessNews
         };
 
         return service;
 
         ////////////////
 
-        function getBusinessNews(business) {
+        function getBusinessNews(businessName) {
         	var deferred = $q.defer();
 
-	        $http.get('http://content.guardianapis.com/search?q=' + business + '&api-key=b1107cb2-bf15-49ee-94b1-d043854f5127')
+	        $http.get('http://content.guardianapis.com/search?q=' + businessName + '&api-key=b1107cb2-bf15-49ee-94b1-d043854f5127')
 	        .then(function(response) {
 	        	deferred.resolve(response.data);
 	        	// console.log(response.data);
@@ -36,5 +35,6 @@
         } //  getBusinessNews function
 
         
+
     }	// businessFactory function
 })();

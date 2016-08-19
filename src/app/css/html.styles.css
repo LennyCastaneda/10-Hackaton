@@ -1,0 +1,138 @@
+
+/* ================================= 
+  Home page index.html
+==================================== */
+
+#header {
+    background-color: #212121 ;
+    color: #fff;
+    text-shadow: 2px 4px 6px #000000 ;
+    rgba: (255, 255, 255, .5);
+}
+
+#headerBody {
+    background-color: #242424 ;
+}
+
+#companyDescription {
+    font-size: 6.5em;
+    background-color: #242424 ;
+    color: #fff;
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+#workLogo {
+    background-color: #242424 ;
+    font-size: 1.6em;
+}
+
+#makeLifeEasier {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.4em;
+    padding-top: 20px;
+}
+
+#p2016 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: .3em;
+    padding-top: -15px;
+}
+
+#whatIsHappening {
+    font-size: .7em;
+}
+
+#whatIsHappening2 {
+    font-size: .7em;
+}
+
+#arrowDown {
+    font-size: 1.3em;
+    padding-top: -25px;
+    color: #55acee ;
+}
+
+#myCarousel {
+    background-color: black;
+    width: 1898px;
+    margin-left: -323.7px;
+    margin-top: -40px;
+    height: 950px;
+}    
+
+#carousel1 {
+    color: #fff;
+    background-image: url('/img/stockChart.jpg');
+    width: 1898px;
+    height: 950px;
+}    
+
+#appleSlide {
+    font-size: 6em;
+    padding-left: 20px;
+}
+
+#appleTickr {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2.8em;
+    padding-top: -15px;
+    padding-left: 35px;
+}    
+
+#appleIcon {
+    color: #fff;
+    font-size: 1em;
+    padding-left: 30px;
+}
+
+#carousel1Caption {
+    font-size: 4.3em;
+}
+
+#carousel2Caption {
+    font-size: 4.3em;
+}
+
+#moneyIcon {
+    font-size: 8em;
+    padding-top: 100px;
+    color: #00ff00 ;
+}
+
+#carousel2 {
+    color: #fff;
+    background-image: url('/img/newsImage.jpg');
+    width: 1898px;
+    height: 950px;
+}    
+
+#bulbIcon {
+    font-size: 8em;
+    padding-top: 100px;
+    color: #ffff00 ;
+}
+
+#carousel3Caption {
+    font-size: 4.3em;
+}
+
+#carousel4Caption {
+    font-size: 4.3em;
+}
+
+#formButton {
+    background-color: #55acee ;
+    margin-top: 390px;
+    font-size: 2em;
+    margin-left: 825px;
+
+}
+
+#formButton2 {
+    background-color: #55acee ;
+    margin-top: 390px;
+    font-size: 2em;
+    margin-left: 825px;
+
+}

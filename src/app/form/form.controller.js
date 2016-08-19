@@ -5,10 +5,10 @@
         .module('formApp')
         .controller('formController', formController);
 
-    formController.$inject = ['businessFactory'];
+    formController.$inject = ['businessFactory', '$stateParams'];
 
     /* @ngInject */
-    function formController(businessFactory) {
+    function formController(businessFactory, $stateParams) {
         var vm = this; //jshint ignore:line
         vm.company = '';
         vm.userInput = userInput;
@@ -23,8 +23,10 @@
 	        		console.log(data);
 	        	},
 
-	        	function(error) {});
-	        		// console.log(vm.companyData);
+	        	function(error) {
+                    console.log(error);
+                });
+	        		
     	}
     }	
 })();

@@ -5,7 +5,7 @@
         .module('formApp', ['ui.router'])
         .config(function($urlRouterProvider, $stateProvider) {
 
-        	$urlRouterProvider.otherwise('/form');
+        	$urlRouterProvider.otherwise('/');
 
         	$stateProvider
         		.state('form', {
@@ -14,9 +14,9 @@
         			controller: 'formController as formCtrl'
         		})
         		.state('company', {
-        			url: '/company/:companyName',
+        			url: '/company/:businessName',
         			templateUrl: '/app/company/company.html',
-        			controller: 'companyController as CompanyCtrl'
+        			controller: 'companyController as companyCtrl'
         		});
         });  
 })();

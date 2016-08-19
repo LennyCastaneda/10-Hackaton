@@ -3,17 +3,18 @@
 
     angular
         .module('formApp')
-        .controller('formController', formController);
+        .controller('companyController', companyController);
 
-    formController.$inject = ['businessFactory', '$stateParams'];
+    companyController.$inject = ['businessFactory', '$stateParams'];
 
     /* @ngInject */
-    function formController(businessFactory, $stateParams) {
+    function companyController(businessFactory, $stateParams) {
         var vm = this; //jshint ignore:line
-  
-        businessFactory.getCompany($stateParams.businessName).then(
+        
+
+        businessFactory.getBusinessNews($stateParams.businessName).then(
             function(data) {
-                detail.data = data;
+                vm.data = data;
             },
             function(error) {
                 console.log(error);
