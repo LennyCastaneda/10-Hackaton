@@ -7,11 +7,13 @@ var gulp = require('gulp'),
     inject = require('gulp-inject'),    
     open = require('gulp-open'); 
 
+ //Any changes to any js files, in any folder in src/app folder
 var jsSources = ['src/app/**/*.js'],
-    //Any changes to any css files, in any folder in src/content folder
-    cssSources = ['src/content/**/*.css'],
+    //Any changes to any css files, in any folder in src/app folder
+    cssSources = ['src/css/**/*.css'],
     //Any Changes to any html file in src folder
     htmlSources = ['src/*.html'];
+    
 
 
 //Wathc for any changes in the files.
@@ -25,7 +27,7 @@ gulp.task('watch', function() {
 //These are the sources and their paths.
 //Any of the .js files in any of the folders in src/js
 //Any of the .css file sin any of the folders in src/css
-var paths = ['./bower_components/','./src/app/**/*.js','./src/app/content/**/*.css'];
+var paths = ['./bower_components/','./src/app/**/*.js','./src/app/css/**/*.css'];
 
 
 gulp.task('inject', function() {
@@ -73,7 +75,7 @@ gulp.task('app', function(){
         //This is the URL to open.
         uri: 'http://localhost:8080',
         //This is the app on my computer to use
-        app: 'Google Chrome'  //FireFox; Internet Explorer
+        app: 'Google Chrome',  //FireFox; Internet Explorer  
     };
     //Open up this file
     gulp.src('./src/index.html')

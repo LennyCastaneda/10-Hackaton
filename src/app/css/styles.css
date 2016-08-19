@@ -1,0 +1,87 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  The html and body elements cannot have any padding or margin.
+}
+
+
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Main header jumbotron ---- */
+
+
+
+
+/* ---- Income Entry Container ---- */
+
+
+div.wrapper {
+  min-height: calc(100vh - 64px);
+/*   min-height: auto; */
+  /* Negative indent footer by its height */
+  margin: 0px auto 0px;
+  /* Pad bottom by footer height */
+  padding: 0 0px 0px;
+  width: 100%;
+/*   border: 5px solid #E18728; */
+}
+
+/* .form-group {
+	text-align: left;
+	margin: 0 0% 0;
+	padding
+}
+ */
+
+/* ================================= 
+	Footer
+==================================== */
+
+/*Establishes the parameters for sticky footer*/
+/* .main-footer, .sticky-footer  {
+	font-size: 1em;
+	clear: both;
+	text-align: center;
+}
+
+.main-footer {
+	position: relative;
+	right:  0;
+	bottom:  0;
+	left:  0;
+	padding: .5em 0;
+	margin-top: 5px;
+	background: #d9e4ea;
+}  */
+
+/* .sticky-footer {
+	height: .5em;
+} */
+
+
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+}

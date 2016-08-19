@@ -1,0 +1,93 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '–g',
+1 verbose cli   'bower' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose install initial load of /Users/the4thestate/GitHub/10-Hackathon/package.json
+5 warn package.json hackathon@1.0.0 No description
+6 warn package.json hackathon@1.0.0 No README data
+7 verbose installManyTop reading scoped package data from /Users/the4thestate/GitHub/10-Hackathon/node_modules/gulp/package.json
+8 verbose installManyTop reading scoped package data from /Users/the4thestate/GitHub/10-Hackathon/node_modules/gulp-connect/package.json
+9 verbose installManyTop reading scoped package data from /Users/the4thestate/GitHub/10-Hackathon/node_modules/gulp-inject/package.json
+10 verbose installManyTop reading scoped package data from /Users/the4thestate/GitHub/10-Hackathon/node_modules/gulp-livereload/package.json
+11 verbose installManyTop reading scoped package data from /Users/the4thestate/GitHub/10-Hackathon/node_modules/gulp-open/package.json
+12 verbose installManyTop reading scoped package data from /Users/the4thestate/GitHub/10-Hackathon/node_modules/gulp-util/package.json
+13 verbose installManyTop reading scoped package data from /Users/the4thestate/GitHub/10-Hackathon/node_modules/wiredep/package.json
+14 verbose readDependencies loading dependencies from /Users/the4thestate/GitHub/10-Hackathon/package.json
+15 silly cache add args [ '–g', null ]
+16 verbose cache add spec –g
+17 silly cache add args [ 'bower', null ]
+18 verbose cache add spec bower
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: '–g',
+19 silly cache add   scope: null,
+19 silly cache add   name: null,
+19 silly cache add   rawSpec: '–g',
+19 silly cache add   spec: '/Users/the4thestate/GitHub/10-Hackathon/–g',
+19 silly cache add   type: 'local' }
+20 silly cache add parsed spec Result {
+20 silly cache add   raw: 'bower',
+20 silly cache add   scope: null,
+20 silly cache add   name: 'bower',
+20 silly cache add   rawSpec: '',
+20 silly cache add   spec: 'latest',
+20 silly cache add   type: 'tag' }
+21 silly addNamed bower@latest
+22 verbose addNamed "latest" is being treated as a dist-tag for bower
+23 info addNameTag [ 'bower', 'latest' ]
+24 silly mapToRegistry name bower
+25 silly mapToRegistry using default registry
+26 silly mapToRegistry registry https://registry.npmjs.org/
+27 silly mapToRegistry data Result {
+27 silly mapToRegistry   raw: 'bower',
+27 silly mapToRegistry   scope: null,
+27 silly mapToRegistry   name: 'bower',
+27 silly mapToRegistry   rawSpec: '',
+27 silly mapToRegistry   spec: 'latest',
+27 silly mapToRegistry   type: 'tag' }
+28 silly mapToRegistry uri https://registry.npmjs.org/bower
+29 verbose addNameTag registry:https://registry.npmjs.org/bower not in flight; fetching
+30 error addLocal Could not install /Users/the4thestate/GitHub/10-Hackathon/–g
+31 verbose request uri https://registry.npmjs.org/bower
+32 verbose request no auth needed
+33 info attempt registry request try #1 at 11:27:39 AM
+34 verbose request id a2018b94bc48ca54
+35 verbose etag "QEAEN1LMEH6EKJ0JAD8357YB"
+36 http request GET https://registry.npmjs.org/bower
+37 info retry will retry, error on last attempt: TypeError: The header content contains invalid characters
+38 info attempt registry request try #2 at 11:27:49 AM
+39 verbose etag "QEAEN1LMEH6EKJ0JAD8357YB"
+40 http request GET https://registry.npmjs.org/bower
+41 info retry will retry, error on last attempt: TypeError: The header content contains invalid characters
+42 info attempt registry request try #3 at 11:28:49 AM
+43 verbose etag "QEAEN1LMEH6EKJ0JAD8357YB"
+44 http request GET https://registry.npmjs.org/bower
+45 silly get cb [ 304, undefined ]
+46 verbose etag https://registry.npmjs.org/bower from cache
+47 verbose get saving bower to /Users/the4thestate/.npm/registry.npmjs.org/bower/.cache.json
+48 verbose correctMkdir /Users/the4thestate/.npm correctMkdir not in flight; initializing
+49 silly addNameTag next cb for bower with tag latest
+50 silly addNamed bower@1.7.9
+51 verbose addNamed "1.7.9" is a plain semver version for bower
+52 silly cache afterAdd bower@1.7.9
+53 verbose afterAdd /Users/the4thestate/.npm/bower/1.7.9/package/package.json not in flight; writing
+54 verbose correctMkdir /Users/the4thestate/.npm correctMkdir not in flight; initializing
+55 verbose afterAdd /Users/the4thestate/.npm/bower/1.7.9/package/package.json written
+56 verbose stack Error: ENOENT: no such file or directory, open '/Users/the4thestate/GitHub/10-Hackathon/–g'
+56 verbose stack     at Error (native)
+57 verbose cwd /Users/the4thestate/GitHub/10-Hackathon
+58 error Darwin 15.6.0
+59 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "–g" "bower"
+60 error node v4.4.7
+61 error npm  v2.15.8
+62 error path /Users/the4thestate/GitHub/10-Hackathon/–g
+63 error code ENOENT
+64 error errno -2
+65 error syscall open
+66 error enoent ENOENT: no such file or directory, open '/Users/the4thestate/GitHub/10-Hackathon/–g'
+66 error enoent This is most likely not a problem with npm itself
+66 error enoent and is related to npm not being able to find a file.
+67 verbose exit [ -2, true ]

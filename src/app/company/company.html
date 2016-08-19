@@ -1,0 +1,26 @@
+	<!-- Business - Stock Chart Goes Here-->
+	<div>
+	</div>
+
+
+	<!-- News article panel div - ng-repeat column -->
+	<div class="col-sm-4 animated bounceIn" ng-repeat="x in formCtrl.companyData.response.results">
+		<div class="panel panel-default">
+			<div class="panel-heading text-center" style="height: 55px; background-color: #ebebeb; color: #333333;" id="panel_head">
+		        <strong>{{x.webTitle}}</strong>
+		 		<br>
+		        <a href="{{x.webUrl}}">{{x.webUrl}}</a>
+			</div> <!-- Panel heading div -->
+		</div> 
+	</div> 
+
+
+<div>
+	<h1>Related News Articles for {{formCtrl.company}}</h1>
+	<div ng-repeat="x in formCtrl.companyData.response.results">
+        
+ 		<a href="{{x.webUrl}}"><strong>{{x.webTitle}}</strong></a>
+ 		<br>
+		<br>
+	</div>
+</div>

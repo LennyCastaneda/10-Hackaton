@@ -1,0 +1,31 @@
+{
+  "name": "hackathon",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Lenny Castaneda <lenny.castaneda@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mkempinsky/10-Hackaton",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "./src/bower_components"
+  ],
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "animate.css": "^3.5.2"
+  }
+}
