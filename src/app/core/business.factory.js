@@ -17,7 +17,7 @@
 
         return service;
 
-        ////////////////
+    //////////////////////////////////////////////////////
 
         // Create new variable to hold user input that is being used to query company name from the API.
         // Use this variable in controller for $stateparms.
@@ -42,6 +42,5 @@
 	    return deferred.promise;
 
         } //  getBusinessNews function
-
     } // businessFactory function
 })();

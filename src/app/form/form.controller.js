@@ -19,7 +19,6 @@
         ////////////////
 
         function userInput(info) {
-        	var upperCaseTicker = vm.company;
 	        businessFactory.getBusinessNews(info).then(
 	        	function(data) {
 	        		vm.companyData = data;
