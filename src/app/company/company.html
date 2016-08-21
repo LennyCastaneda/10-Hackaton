@@ -8,31 +8,33 @@
 
 <div>
     <!-- Business - Stock Chart Goes Here-->
+
+
+	<!-- Business - Stock Chart Goes Here-->
 </div>
 
 
 <div class="container">
    <div class="row">
        <div class=" section horizontal text-xs-center animated zoomIn col m-3 s-6 xs-12">
-
-				<div class="card card-stacked text-xs-center" ng-repeat="x in companyCtrl.data.response.results">
-				  <div class="card-header">
-				  	Section: {{x.sectionName}}
-				  </div>
-				  <div class="card-content">
-				    <h4 id="newsTitle" class="card-title">{{x.webTitle}}</h4>
-				    <br>
-				    <br>
-				    <div>
-				    	<a href="{{x.webUrl}}" class="btn btn-primary">Full article</a>
-				    </div>
-				    <br>
-				 	<div class="card-footer text-muted">
-						<p class="card-text">{{x.webPublicationDate | date}}.</p>
-					</div>
-				 </div>
-				</div>   
-   
+			<!-- ng-repeat the recieved data called from the companyCtrl that is sending and looping the JSON data that contains:  response as the parent and results as the child of arrays containing all a particular news articalr parameters and value pairs. -->
+			<div class="card card-stacked text-xs-center" ng-repeat="x in companyCtrl.data.response.results">
+			  <div class="card-header">
+			  	Section: {{x.sectionName}}
+			  </div>
+			  <div class="card-content">
+			    <h4 id="newsTitle" class="card-title">{{x.webTitle}}</h4>
+			    <br>
+			    <br>
+			    <div>
+			    	<a href="{{x.webUrl}}" class="btn btn-primary">Full article</a>
+			    </div>
+			    <br>
+			 	<div class="card-footer text-muted">
+					<p class="card-text">{{x.webPublicationDate | date}}.</p>
+				</div>
+			 </div>
+			</div>   
        </div>
    </div>
 </div>

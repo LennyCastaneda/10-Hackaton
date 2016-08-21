@@ -35,15 +35,16 @@
 			
 
 
-			<!--=========== ng-model UserInput Ticker div================-->  
+		<!--=========== ng-model UserInput Ticker div================-->  
 			  <div class="form-group">
 			    <label for="company">Company</label>
 
+				<!-- Use businessName for ng-model controller connection to the form  -->
 			    <input ng-model="formCtrl.businessName" required type="text" class="form-control" id="companyInput" placeholder="Company full name goes here">
 			 	
 			 	<small id="companyInput" class="form-text text-muted">Please enter the name of the company you're invested in.</small>
 			  </div> <!-- Company div-->
-			 <!--=========== ng-model UserInput Ticker div================-->			  
+		<!--=========== ng-model UserInput Ticker div================-->			  
 
 
 
@@ -65,6 +66,7 @@
 			  </div> <!-- Feedback div-->
 			  
 			  <div>
+				<!-- Insert ui-sref directing button to company html page as destination using the user input stored in businessName within the form controller scope.  -->
 			  	<button type="submit" class="btn btn-primary pull-right" ui-sref="company({ businessName: formCtrl.businessName })">Submit</button>
 			  </div> <!-- Button div - ui-sref trigger -->
 

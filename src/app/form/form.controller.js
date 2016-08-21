@@ -1,10 +1,13 @@
-(function() {
-    'use strict';
+(function() { // John Papa style of creating a module.
+    'use strict'; // Ensures no undeclared variables.
 
     angular
-        .module('formApp')
-        .controller('formController', formController);
+        // Connect to the formApp module.
+        .module('formApp') 
+        // Create a controller to connect to the form, name it formController. Add it as 2nd argument dependency.
+        .controller('formController', formController); 
 
+    // Inject the newly created businessFactory and the required $stateParams into the companyController 
     formController.$inject = ['businessFactory', '$stateParams'];
 
     /* @ngInject */
