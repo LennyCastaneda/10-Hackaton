@@ -15,7 +15,7 @@
 			</div>	
 
 			<!-- Form div-->
-			<form ng-submit="getBusinessNews(formCtrl.company)">  <!-- ng-submit something here -->
+			<form ng-submit="getBusinessNews(formCtrl.company); getStockInfo(formCtrl.stockTicker">  <!-- ng-submit something here -->
 			  
 			  <div class="form-group">
 			    <label for="firstName">First name</label>
@@ -33,8 +33,10 @@
 			    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 			  </div> <!-- Email div-->
 			
+
+
 			
-			<!--=========== ng-model UserInput Ticker div================-->  
+			<!--=========== ng-model UserInput businessName div================-->  
 			  <div class="form-group">
 			    <label for="company">Company</label>
 
@@ -43,15 +45,22 @@
 			 	
 			 	<small id="companyInput" class="form-text text-muted">Please enter the name of the company you're invested in.</small>
 			  </div> <!-- Company div-->
-			<!--=========== ng-model UserInput Ticker div================-->			  
+			<!--=========== ng-model UserInput businessName div================-->			  
 
 
 
+
+			
+			<!--=========== ng-model UserInput stockTicker div================-->  
 			  <div class="form-group">
-			    <label for="ticker">Ticker symbol</label>			    
-			    <input type="text" class="form-control" id="tickerInput" placeholder="Enter ticker symbol goes here">
+			    <label required for="ticker">Ticker symbol</label>			    
+			    <input ng-model="formCtrl.stockTicker" required type="text" class="form-control" id="tickerInput" placeholder="Enter ticker symbol goes here">
 			    <small class="form-text text-muted">Type in ticker symbol here.</small>		  			  
 			  </div> 
+			<!--=========== ng-model UserInput stockTicker div================-->  
+
+
+
 
 			  <div class="form-group">
 			    <label for="totalShares">Total shares</label>
@@ -66,16 +75,18 @@
 			  
 			  <div>
 				<!-- Insert ui-sref directing button to company html page as destination using the user input stored in businessName within the form controller scope.  -->
-			  	<button type="submit" class="btn btn-primary pull-right" ui-sref="company({ businessName: formCtrl.businessName })">Submit</button>
+			  	<button type="submit" class="btn btn-primary pull-right" ui-sref="company({ businessName: formCtrl.businessName, stockTicker: formCtrl.stockTicker })">Submit</button>
 			  </div> <!-- Button div - ui-sref trigger -->
 			</form>
 		</div> <!-- Content container div-->
 	</div> <!-- Wrapper class div -->
+
 
 	<div ng-repeat="x in formCtrl.companyData.response.results">
  		<a href="{{x.webUrl}}"><strong>{{x.webTitle}}</strong></a>
  		<br>
 		<br>
 	</div>
+
 </body>
 <!-- 	<pre>{{ fformCtrl.companyData.response.results| json }}</pre> -->

@@ -20,7 +20,7 @@
         		})
                 // Name this state 'company' hasa specific url and file path and its controller. is companyCtrl
         		.state('company', {
-        			url: '/company/:businessName',
+        			url: '/company/:businessName/:stockTicker',
         			templateUrl: '/app/company/company.html',
         			controller: 'companyController as companyCtrl'
         		});

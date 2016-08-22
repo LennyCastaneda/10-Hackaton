@@ -7,10 +7,8 @@
 
 	<title>Company Business News Tracker</title>
 	<!-- bower:css -->
-	<link rel="stylesheet" href="bower_components/animate.css/animate.css" />
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-<!-- 	<link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" /> -->
-
+	<link rel="stylesheet" href="bower_components/animate.css/animate.css" />
 	<!-- endbower -->
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -19,8 +17,8 @@
 
 
 	<!-- inject:css -->
-	<link rel="stylesheet" href="app/css/normalize.css">
 	<link rel="stylesheet" href="app/css/flexbox.css">
+	<link rel="stylesheet" href="app/css/normalize.css">
 	<link rel="stylesheet" href="app/css/styles.css">
 	<!-- endinject -->
 </head>
@@ -30,18 +28,21 @@
 			<nav id="header" class="z-depth-3">
 				<div class="nav-wrapper">
 				<br>
+				<br>
 				<h1 class="text-center">Investor News Company Tracker</h1>
 				</div>
 			</nav>
 			<div class="text-center">
 				<h3 id="companyDescription" class="text-center z-depth-3">
 					<!-- i id="workLogo" class="large material-icons center">work</i> -->
-					<p id="makeLifeEasier">Make Life Easier.</p>
+					<br>
 					<br>
 					<p id="whatIsHappening">Find out what company news and press releases</p>
 					<p id="whatIsHappening2">with just the click of a button.</p>
 					<!-- <i id="arrowDown" class="material-icons">arrow_downward</i> -->
 				</h3>
+				<br>
+				<br>
 				<div class="col-xs-12">
 					<button ng-click="formCtrl.userInput(formCtrl.form)" class="btn btn-success btn-lg text-center" type="submit" ui-sref="form({ businessName: formCtrl.businessName})">Get on the list!</button>
 				</div> <!-- Button div-->
@@ -53,7 +54,6 @@
 		<script src="bower_components/jquery/dist/jquery.js"></script>
 		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-	<!-- 	<script src="bower_components/materialize/bin/materialize.js"></script> -->
 		<!-- endbower -->
 
 	    <!-- inject:js -->

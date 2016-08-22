@@ -5,17 +5,15 @@
 html {
   box-sizing: border-box;
 }
-/* 
+
 *, *:before, *:after {
   box-sizing: inherit;
-} */
+}
 
 html,
 body {
   height: 100%;
-  background-image: url("https://s-media-cache-ak0.pinimg.com/564x/92/f4/a0/92f4a03d6ac3e7da883f64dde6c4f5eb.jpg");
   background-size:  cover;
-/*   background-color: red; */
 }
 
 
@@ -33,150 +31,24 @@ div.wrapper {
 /*   border: 5px solid #E18728; */
 }
 
-/* .form-group {
-	text-align: left;
-	margin: 0 0% 0;
-	padding
-}
- */
 
  /* ================================= 
-  Home page index.html
+  Company index.html
 ==================================== */
 
-#header {
-    background-color: #212121 !important;
-    color: #fff;
-    text-shadow: 2px 4px 6px #000000;
-    rgba: (255, 255, 255, .5);
+
+.center-table
+{
+  margin: 0 auto !important;
+  float: none !important;
 }
 
-#headerBody {
-    background-color: #242424 ;
-
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+  border: 1px solid #000;
 }
 
-#companyDescription {
-    font-size: 6.5em;
-    background-color: #242424 ;
-    color: #fff;
-    padding-top: 60px;
-    padding-bottom: 100px;
-}
-
-#workLogo {
-    background-color: #242424 ;
-    font-size: 1.6em;
-}
-
-#makeLifeEasier {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 1.4em;
-    padding-top: 20px;
-}
-
-#p2016 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: .3em;
-    padding-top: -15px;
-}
-
-#whatIsHappening {
-    font-size: .7em;
-}
-
-#whatIsHappening2 {
-    font-size: .7em;
-}
-
-#arrowDown {
-    font-size: 1.3em;
-    padding-top: -20px;
-    color: #55acee ;
-	padding-left:  5%;
-}
-
-#myCarousel {
-    background-color: black;
-    width: 1898px;
-    margin-left: -323.7px;
-    margin-top: -40px;
-    height: 950px;
-}    
-
-#carousel1 {
-    color: #fff;
-    background-image: url('src/img/stockChart.jpg');
-    width: 1898px;
-    height: 950px;
-}    
-
-#appleSlide {
-    font-size: 6em;
-    padding-left: 20px;
-}
-
-#appleTickr {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 2.8em;
-    padding-top: -15px;
-    padding-left: 35px;
-}    
-
-#appleIcon {
-    color: #fff;
-    font-size: 1em;
-    padding-left: 30px;
-}
-
-#carousel1Caption {
-    font-size: 4.3em;
-}
-
-#carousel2Caption {
-    font-size: 4.3em;
-}
-
-#moneyIcon {
-    font-size: 8em;
-    padding-top: 100px;
-    color: #00ff00 ;
-}
-
-#carousel2 {
-    color: #fff;
-    background-image: url('src/img/newsImage.jpg');
-    width: 1898px;
-    height: 950px;
-}    
-
-#bulbIcon {
-    font-size: 8em;
-    padding-top: 100px;
-    color: #ffff00 ;
-}
-
-#carousel3Caption {
-    font-size: 4.3em;
-}
-
-#carousel4Caption {
-    font-size: 4.3em;
-}
-
-#formButton {
-    background-color: #55acee ;
-    margin-top: 390px;
-    font-size: 2em;
-    margin-left: 825px;
-}
-
-#formButton2 {
-    background-color: #55acee ;
-    margin-top: 390px;
-    font-size: 2em;
-    margin-left: 825px;
-
+.company-title {
+  text:  #000;
 }
 
 /* ================================= 

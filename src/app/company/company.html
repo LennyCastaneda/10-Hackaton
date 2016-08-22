@@ -1,10 +1,58 @@
-<div id="heading">    
+<div class="well well-primary" id="heading">    
     <heading>
         <h1 class="text-center">Stay Updated on Company News</h1>
     </heading>
 </div>
+<div class="table-fluid container">
+	<table class="center-table table-bordered col-md-12 col-xs-6">
+		<caption>{{companyCtrl.stockData.Name}} Stock Info</caption>
+		<thead>
+			<tr class="lead">
+				<th>Symbol</th>
+				<th>Last Price</th>
+				<th>Change</th>
+				<th>Change %</th>
+				<th>Market Cap</th>
+				<th>Volume</th>
+				<th>Open</th>
+				<th>High</th>
+				<th>Low</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					{{companyCtrl.stockData.Symbol}} 
+				</td>
+				<td>
+					${{companyCtrl.stockData.LastPrice}} 
+				</td>
+				<td>
+					{{companyCtrl.stockData.Change | number : fractionSize}}
+				</td>
+				<td>
+					{{companyCtrl.stockData.ChangePercent | number : fractionSize}}%
+				</td>
+				<td>
+					{{companyCtrl.stockData.MarketCap | currency}} 
+				</td>
+				<td>
+					{{companyCtrl.stockData.Volume | number}} shares 
+				</td>
+				<td>
+					${{companyCtrl.stockData.Open}} 
+				</td>
+				<td>
+					${{companyCtrl.stockData.High}} 
+				</td>
+				<td>
+					${{companyCtrl.stockData.Low}} 
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
- 
 <div class="container">
    <div class="row">
       	<div class="text-center section horizontal text-xs-center animated zoomIn col m-3 s-6 xs-12">
